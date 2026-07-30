@@ -1,0 +1,66 @@
+/* Simple beginner-friendly stylesheet
+   - Minimal selectors, easy to read
+   - Keeps all text/content unchanged
+*/
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Poppins', Arial, sans-serif; color: #222; line-height: 1.5; background: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+
+header { background: #f8f5f0; border-bottom: 1px solid #e6dfd5; }
+.navbar { max-width: 1000px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; }
+.brand-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+.nav-links { display: flex; gap: 12px; }
+.nav-links a { color: #333; font-weight: 500; }
+
+.hero { padding: 40px 16px; }
+.hero-grid { max-width: 1000px; margin: 0 auto; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.hero-copy { flex: 1 1 420px; }
+.hero-title { font-size: 28px; margin: 8px 0; }
+.hero-desc { color: #444; margin-bottom: 12px; }
+.hero-actions { display: flex; gap: 8px; margin-bottom: 12px; }
+.btn { padding: 8px 14px; border-radius: 999px; text-decoration: none; display: inline-block; }
+.btn-primary { background: #c85a32; color: white; }
+.btn-ghost { background: transparent; border: 1px solid #c85a32; color: #c85a32; }
+.hero-media { flex: 1 1 300px; border-radius: 8px; overflow: hidden; }
+
+section { padding: 28px 16px; }
+.section-head { max-width: 900px; margin: 0 auto 18px; text-align: center; }
+
+.about-inner, .menu-grid, .special-grid, .contact-grid { max-width: 1000px; margin: 0 auto; }
+.about-inner { display: flex; gap: 18px; flex-wrap: wrap; }
+.about-media { flex: 1 1 260px; }
+.about-copy { flex: 2 1 360px; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; }
+.dish-card { border: 1px solid #eee; padding: 10px; border-radius: 8px; background: #fff; }
+.dish-head { display:flex; align-items:center; gap:8px; }
+.dish-price { color: #c85a32; font-weight:600; }
+
+.special-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.sadhya-list { list-style: none; padding: 0; margin: 12px 0; }
+.sadhya-list li { padding: 6px 0; border-bottom: 1px dashed #eee; }
+
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; }
+.contact-card { border: 1px solid #eee; padding: 12px; border-radius: 8px; background:#fff; }
+
+footer { background: #222; color: #f5f3f0; padding: 18px 16px; }
+.footer-inner { max-width: 1000px; margin: 0 auto; display:flex; gap:12px; flex-wrap:wrap; }
+
+/* Small helper: eyebrow label */
+.eyebrow {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c85a32;
+}
+
+@media (max-width: 640px) {
+  .navbar, .hero-grid, .about-inner { padding-left: 12px; padding-right: 12px; }
+  .hero-title { font-size: 22px; }
+}
+
+/* End simple stylesheet */

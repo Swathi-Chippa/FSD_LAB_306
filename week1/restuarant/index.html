@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneha Koottu — Authentic Kerala Kitchen</title>
+  <style>
+    /* ==================== RESET & BASE ==================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #fcfbfa;
+      color: #2d3142;
+      line-height: 1.5;
+    }
+
+    /* ======================================================
+       FLEXBOX USE CASE 1: HEADER & NAVBAR
+       ====================================================== */
+    .site-header {
+      background-color: #1f2421;
+      padding: 1.2rem 2rem;
+      /* FLEXBOX PROPERTIES */
+      display: flex;                  
+      justify-content: space-between; /* Spreads brand & nav apart */
+      align-items: center;            /* Vertically centers contents */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand {
+      color: #e07a5f;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .brand span {
+      color: #f4f1de;
+      font-size: 0.85rem;
+      display: block;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      /* FLEXBOX PROPERTIES */
+      display: flex;                  
+      list-style: none;
+      gap: 1.8rem;
+    }
+
+    .nav-links a {
+      color: #f4f1de;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #e07a5f;
+    }
+
+    /* ==================== CONTAINER ==================== */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ======================================================
+       FLEXBOX USE CASE 2: HERO / ABOUT SECTION (2-COLUMN BANNER)
+       ====================================================== */
+    .about-banner {
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #eae6df;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      /* FLEXBOX PROPERTIES */
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .about-text {
+      flex: 1; /* Takes equal space */
+    }
+
+    .about-text h1 {
+      font-size: 2rem;
+      color: #1f2421;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-text .malayalam {
+      color: #e07a5f;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .about-image {
+      flex: 1; /* Takes equal space */
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Section Heading */
+    .section-title {
+      font-size: 1.5rem;
+      color: #1f2421;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #e07a5f;
+      display: inline-block;
+    }
+
+    /* ======================================================
+       CSS GRID USE CASE: MENU CARD LAYOUT
+       ====================================================== */
+    .menu-grid {
+      /* CSS GRID PROPERTIES */
+      display: grid;                  
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ======================================================
+       FLEXBOX USE CASE 3: CARD LAYOUT & PRICE ALIGNMENT
+       ====================================================== */
+    .menu-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #eae6df;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      /* FLEXBOX inside each card */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dish-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .card-top {
+      /* FLEXBOX: Pushes Dish Title left and Price right */
+      display: flex;                  
+      justify-content: space-between; 
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .dish-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2421;
+    }
+
+    .dish-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #e07a5f;
+      background: #fdf0ed;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    .dish-desc {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1f2421;
+      color: #f4f1de;
+      font-size: 0.9rem;
+    }
+
+    /* Stack flex elements on smaller screens */
+    @media (max-width: 650px) {
+      .about-banner {
+        flex-direction: column;
+      }
+      .site-header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLEXBOX LAYOUT 1: NAVBAR -->
+  <header class="site-header">
+    <div class="brand">
+      Sneha Koottu
+      <span>A Blend of Love · സ്നേഹക്കൂട്ട്</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+
+    <!-- FLEXBOX LAYOUT 2: RESTAURANT ABOUT BANNER -->
+    <section class="about-banner" id="about">
+      <div class="about-text">
+        <h1>Welcome to Sneha Koottu</h1>
+        <p class="malayalam">സ്നേഹക്കൂട്ട് · Serving Fort Kochi Since 1986</p>
+        <p>
+          In Malayalam, <em>Sneha</em> means love and <em>Koottu</em> means a blend. 
+          Located on the historic waterfront of Fort Kochi, we craft traditional Kerala recipes 
+          using hand-ground roasted spices, fresh coconut milk, and coastal recipes passed down through generations.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.pexels.com/photos/37152225/pexels-photo-37152225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Traditional Kerala Meal" />
+      </div>
+    </section>
+
+    <h2 class="section-title" id="menu">Our Authentic Menu</h2>
+
+    <!-- CSS GRID LAYOUT: MENU CARDS -->
+    <div class="menu-grid">
+
+      <!-- Dish 1 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/9609860/pexels-photo-9609860.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Thalassery Biryani" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Thalassery Biryani</h3>
+            <span class="dish-price">₹320</span>
+          </div>
+          <p class="dish-desc">Fragrant Khyma rice dum-cooked with spiced chicken, fried onions, and ghee.</p>
+        </div>
+      </article>
+
+      <!-- Dish 2 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/5915759/pexels-photo-5915759.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Karimeen Pollichathu" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Karimeen Pollichathu</h3>
+            <span class="dish-price">₹420</span>
+          </div>
+          <p class="dish-desc">Fresh pearl spot fish marinated in Malabar masala and pan-grilled in a banana leaf.</p>
+        </div>
+      </article>
+
+      <!-- Dish 3 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Parotta and Beef Roast" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Parotta &amp; Beef Roast</h3>
+            <span class="dish-price">₹340</span>
+          </div>
+          <p class="dish-desc">Flaky layered Malabar parotta served with slow-cooked spicy coconut beef roast.</p>
+        </div>
+      </article>
+
+      <!-- Dish 4 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/9609836/pexels-photo-9609836.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Kozhi Porichathu" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Kozhi Porichathu</h3>
+            <span class="dish-price">₹280</span>
+          </div>
+          <p class="dish-desc">Juicy chicken fried in traditional Malabar spices and fresh curry leaves.</p>
+        </div>
+      </article>
+
+      <!-- Dish 5 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/37332347/pexels-photo-37332347.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Kerala Red Rice Meal" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Kerala Red Rice Meal</h3>
+            <span class="dish-price">₹240</span>
+          </div>
+          <p class="dish-desc">Traditional Matta rice served with Sambar, Avial, Thoran, pickle, and papadam.</p>
+        </div>
+      </article>
+
+      <!-- Dish 6 -->
+      <article class="menu-card">
+        <img class="dish-img" src="https://images.pexels.com/photos/38210856/pexels-photo-38210856.jpeg?auto=compress&cs=tinysrgb&h=400&w=600" alt="Elaneer Payasam" />
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="dish-name">Elaneer Payasam</h3>
+            <span class="dish-price">₹160</span>
+          </div>
+          <p class="dish-desc">Chilled dessert made with fresh tender coconut scrapings and sweetened milk.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer id="contact">
+    <p><strong>Sneha Koottu</strong> — Princess Street, Fort Kochi, Kerala</p>
+    <p style="margin-top: 0.3rem; color: #a0aab2;">For Reservations &amp; Orders: +91 484 000 1986</p>
+  </footer>
+
+</body>
+</html>
