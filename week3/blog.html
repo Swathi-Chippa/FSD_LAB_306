@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background:#f8f9fa;
+        }
+        .hero{
+            background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+            url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8zYZxGxadXOHd954FCA-pD9W23-TilDV9Oxkr1K9GvQ&s=10");
+            background-size:cover;
+            background-position:center;
+            height:400px;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+        .blog-card img{
+            height:220px;
+            object-fit:cover;
+        }
+        footer{
+            background:#212529;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
+    <div class="container" style="background-color: rgb(14, 64, 129);">
+        <a class="navbar-brand" href="#" style="color: aqua;">Personal Bolg</a>
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+</ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div>
+        <h1 class="display-4 fw-bold">Swathi Chippa</h1>
+        <p class="lead">Welcome to my first blog</p>
+<a href="#" class="btn btn-sm" style="background-color: rgb(25, 137, 212);">Explore</a>
+</div>
+</section>
+
+<!-- Main Content -->
+<div class="container my-5">
+<div class="row">
+<!-- Blog Posts -->
+<div class="col-lg-8">
+<div class="row g-4">
+<!-- Card 1 -->
+<div class="col-md-6">
+<div class="card shadow blog-card h-100">
+<img src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNDAxZjVjZTQtYzM4MC00MzI4LWJkMDYtZjkyZWI3NjE5Y2Q2LmpwZWc.webp"
+class="card-img-top">
+<div class="card-body">
+<h4 class="card-title">
+About Me
+</h4>
+<p class="card-text">
+Studying B.E 3rd year V sem at Chaitanya Bharathi Institute of Technology, Hyderabad </p>
+<a href="#"class="btn" style="color: blue;">Read More</a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="col-md-6">
+<div class="card shadow blog-card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtoTMymgMcOKEEBlP8y78QKAENNDIZerRzAhqWCVTrYA&s=10"
+class="card-img-top">
+<div class="card-body">
+<h4 class="card-title">
+Technologies I know
+</h4>
+<p class="card-text">
+Web development: HTML, CSS, Java Script
+Languages: C, C++, Java, Python ...</p>
+<a href="#" class="btn" style="color: blue;">Read More</a>
+</div>
+</div>
+</div>
+<div class="col-sm-8">
+<div class="card shadow blog-card h-100">
+<img src="https://i0.wp.com/www.touristjapan.com/wp-content/uploads/2025/04/17-days-in-japan-itinerary-tokyo-scaled.jpg?fit=2560%2C1707&ssl=1"
+class="card-img-top">
+<div class="card-body">
+<h4 class="card-title">
+holy place
+</h4>
+<p class="card-text">
+Japan is an island country in East Asia located in the Pacific Ocean. Its capital and largest city is Tokyo. </p>
+<a href="#" class="btn" style="color: blue;">Read More</a>
+</div>
+</div>
+</div>
+
+<!-- About -->
+<section class="bg-light py-5">
+<div class="container text-center">
+<h2>About This Blog</h2>
+<p class="lead">This blog contains information about me</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4">
+<div class="container text-center">
+<p class="mb-0">© 2026 MyBlog | Dhyana GOWTHAM</p>
+</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
