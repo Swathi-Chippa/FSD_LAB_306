@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bootstrap 5 Blog</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light text-dark font-sans-serif">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold tracking-tight" href="#"><i class="bi bi-journal-text me-2"></i>DevBytes</a>
+            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-dark text-white text-center py-5 mb-5 position-relative overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos') center/cover;">
+        <div class="container my-5 py-4">
+            <h1 class="display-3 fw-bold mb-3">Stories, Ideas & Expertise</h1>
+            <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 600px;">Explore the latest insights on web development, design trends, and modern technology solutions.</p>
+            <a href="#blog" class="btn btn-primary btn-lg px-4 gap-3 fw-medium shadow">Read Latest Articles</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mb-5" id="blog">
+        <div class="row g-4">
+            
+            <!-- Blog Cards Column (Left Side) -->
+            <div class="col-lg-8">
+                <h2 class="h3 fw-bold mb-4 border-bottom pb-2 text-secondary">Latest Stories</h2>
+                
+                <div class="row g-4">
+                    <!-- Blog Post 1 -->
+                    <div class="col-md-6">
+                        <article class="card h-100 shadow-sm border-0 hover-shadow transition">
+                            <img src="https://picsum.photos" class="card-img-top" alt="Web Development Trends">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge bg-primary-subtle text-primary align-self-start mb-2 px-2.5 py-1.5 fw-semibold rounded-pill text-uppercase fs-7">Technology</span>
+                                <h3 class="h5 card-title fw-bold"><a href="#" class="text-decoration-none text-dark">The Future of Web Development in 2026</a></h3>
+                                <p class="card-text text-muted small flex-grow-1">Discover the emerging architectures, frameworks, and deployment workflows shaping modern web platforms this year.</p>
+                                <div class="d-flex align-items-center mt-3 pt-3 border-top text-muted small">
+                                    <span class="me-3"><i class="bi bi-calendar3 me-1"></i> July 28, 2026</span>
+                                    <span><i class="bi bi-clock me-1"></i> 5 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="col-md-6">
+                        <article class="card h-100 shadow-sm border-0">
+                            <img src="https://picsum.photos" class="card-img-top" alt="UI Design Tips">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge bg-success-subtle text-success align-self-start mb-2 px-2.5 py-1.5 fw-semibold rounded-pill text-uppercase fs-7">Design</span>
+                                <h3 class="h5 card-title fw-bold"><a href="#" class="text-decoration-none text-dark">Mastering Component-Driven Design UI</a></h3>
+                                <p class="card-text text-muted small flex-grow-1">Learn practical strategies to build scalable, accessible, and maintainable user interfaces using utility classes.</p>
+                                <div class="d-flex align-items-center mt-3 pt-3 border-top text-muted small">
+                                    <span class="me-3"><i class="bi bi-calendar3 me-1"></i> July 24, 2026</span>
+                                    <span><i class="bi bi-clock me-1"></i> 4 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="col-md-6">
+                        <article class="card h-100 shadow-sm border-0">
+                            <img src="https://picsum.photos" class="card-img-top" alt="SEO Strategies">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge bg-warning-subtle text-dark align-self-start mb-2 px-2.5 py-1.5 fw-semibold rounded-pill text-uppercase fs-7">Marketing</span>
+                                <h3 class="h5 card-title fw-bold"><a href="#" class="text-decoration-none text-dark">SEO Strategies for Single Page Apps</a></h3>
+                                <p class="card-text text-muted small flex-grow-1">How to ensure search engines successfully crawl and index highly interactive JavaScript web applications.</p>
+                                <div class="d-flex align-items-center mt-3 pt-3 border-top text-muted small">
+                                    <span class="me-3"><i class="bi bi-calendar3 me-1"></i> July 20, 2026</span>
+                                    <span><i class="bi bi-clock me-1"></i> 7 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="col-md-6">
+                        <article class="card h-100 shadow-sm border-0">
+                            <img src="https://picsum.photos" class="card-img-top" alt="Cloud Deployment">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge bg-info-subtle text-info-emphasis align-self-start mb-2 px-2.5 py-1.5 fw-semibold rounded-pill text-uppercase fs-7">DevOps</span>
+                                <h3 class="h5 card-title fw-bold"><a href="#" class="text-decoration-none text-dark">Going Serverless: Pros and Cons</a></h3>
+                                <p class="card-text text-muted small flex-grow-1">An unbiased structural evaluation of serverless infrastructure versus traditional cloud server hosting options.</p>
+                                <div class="d-flex align-items-center mt-3 pt-3 border-top text-muted small">
+                                    <span class="me-3"><i class="bi bi-calendar3 me-1"></i> July 15, 2026</span>
+                                    <span><i class="bi bi-clock me-1"></i> 6 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pagination Component -->
+                <nav aria-label="Blog pagination" class="my-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar Column (Right Side) -->
+            <aside class="col-lg-4">
+                <div class="sticky-top" style="top: 5.5rem;">
+                    
+                    <!-- Search Widget -->
+                    <div class="card border-0 shadow-sm mb-4 p-4">
+                        <h4 class="h5 fw-bold mb-3">Search</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for topics..." aria-label="Search articles">
+                            <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="card border-0 shadow-sm mb-4 p-4">
+                        <h4 class="h5 fw-bold mb-3">Categories</h4>
+                        <div class="row g-2">
+                            <div class="col-6"><a href="#" class="btn btn-light w-100 text-start btn-sm py-2">Technology (12)</a></div>
