@@ -1,0 +1,28 @@
+<h1>Contact Form</h1>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <label>Name</label>
+  <input type="text" formControlName="name">
+
+  <p *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    Name is required
+  </p>
+
+  <label>Email</label>
+  <input type="email" formControlName="email">
+
+  <p *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    Enter a valid email
+  </p>
+
+  <label>Message</label>
+  <textarea formControlName="message"></textarea>
+
+  <p *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+    Message is required
+  </p>
+
+  <button type="submit">Submit</button>
+
+</form>
