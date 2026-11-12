@@ -1,4 +1,4 @@
-# Deep Learning Lab Programs -- Experiments 7 to 10
+# Deep Learning Lab Programs -- Experiments 6 to 10
 
 ## Experiment 6: VGG16 vs ResNet50 using MNIST
 
