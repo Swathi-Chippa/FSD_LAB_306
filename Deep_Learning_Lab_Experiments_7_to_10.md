@@ -1,6 +1,6 @@
 # Deep Learning Lab Programs -- Experiments 7 to 10
 
-## Experiment 7: VGG16 vs ResNet50 using MNIST
+## Experiment 6: VGG16 vs ResNet50 using MNIST
 
 ``` python
 import tensorflow as tf
@@ -51,7 +51,7 @@ print("VGG16:", round(acc[0], 2), "%")
 print("ResNet50:", round(acc[1], 2), "%")
 ```
 
-## Experiment 8: French-to-English Translation using Encoder--Decoder with Attention
+## Experiment 7: French-to-English Translation using Encoder--Decoder with Attention
 
 ``` python
 import numpy as np
